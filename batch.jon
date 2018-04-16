@@ -1,0 +1,9 @@
+#!/bin/bash -l
+##SBATCH -p regular
+#SBATCH -N 1
+#SBATCH -t 48:00:00
+##SBATCH -L project
+##SBATCH -C haswell
+source /home/tw2507/loadstuff.sh
+#srun -n 4 hostname
+srun -n 1 -c 16  /home/tw2507/cuth/build/fitadv/STARTFIT > /home/tw2507/cuth/build/fitadv/log_stationarypipi_sep3_6_25_dosub

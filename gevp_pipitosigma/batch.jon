@@ -1,0 +1,10 @@
+#!/bin/bash -l
+##SBATCH -p regular
+#SBATCH -N 1
+#SBATCH -t 48:00:00
+##SBATCH -L project
+##SBATCH -C haswell
+source /home/tw2507/loadstuff.sh
+#srun -n 4 hostname
+filename=$1
+srun -n 1 -c 16  /home/tw2507/cuth/build/fitadv/gevp_pipitosigma/STARTFIT > /home/tw2507/cuth/build/fitadv/gevp_pipitosigma/${filename}

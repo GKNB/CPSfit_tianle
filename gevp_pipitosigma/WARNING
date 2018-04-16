@@ -1,0 +1,1 @@
+IN fit_adv.h around line 1661, I commented out 2 assert, which is really important if we do want to do vacuum sub when doing pipitosigma
